@@ -1,0 +1,122 @@
+{% extends "layout.html" %}
+{% block title %}Contact | Campus Companion AI{% endblock %}
+{% block body_class %}page-contact{% endblock %}
+
+{% block content %}
+
+<section class="page-header">
+    <div class="container text-center">
+        <span class="badge-pill"><i class="bi bi-envelope-fill me-1"></i> Get In Touch</span>
+        <h1>Contact <span class="text-gradient">Us</span></h1>
+        <p>Have questions or feedback about Campus Companion AI? We'd love to hear from you.</p>
+    </div>
+</section>
+
+<section class="section-padding">
+    <div class="container">
+        <div class="row g-5">
+
+            <div class="col-lg-5">
+                <span class="section-tag">Reach Out</span>
+                <h2 class="mb-4">Let's Start a <span class="text-gradient">Conversation</span></h2>
+                <p class="mb-4">
+                    Whether you have a question about the project, feedback on the assistant, or
+                    interest in collaborating on the IBM University Engagement program, our team
+                    is here to help.
+                </p>
+
+                <div class="contact-info-item">
+                    <div class="contact-info-icon"><i class="bi bi-envelope-fill"></i></div>
+                    <div>
+                        <h6>Email</h6>
+                        <p>campuscompanion.ai@university.edu</p>
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <div class="contact-info-icon"><i class="bi bi-telephone-fill"></i></div>
+                    <div>
+                        <h6>Phone</h6>
+                        <p>+91 98765 43210</p>
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <div class="contact-info-icon"><i class="bi bi-geo-alt-fill"></i></div>
+                    <div>
+                        <h6>Location</h6>
+                        <p>University Campus, Innovation Block, Room 204</p>
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <div class="contact-info-icon"><i class="bi bi-building-fill"></i></div>
+                    <div>
+                        <h6>Program</h6>
+                        <p>IBM University Engagement Project</p>
+                    </div>
+                </div>
+
+                <div class="social-icons mt-4">
+                    <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                    <a href="#" aria-label="Twitter/X"><i class="bi bi-twitter-x"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                    <a href="#" aria-label="GitHub"><i class="bi bi-github"></i></a>
+                </div>
+            </div>
+
+            <div class="col-lg-7">
+                <div class="contact-form-card">
+                    <h4 class="mb-4">Send us a Message</h4>
+                    <form id="contactForm" novalidate>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="fullName" class="form-label">Full Name</label>
+                                <input type="text" class="form-control" id="fullName" placeholder="Enter your full name" required>
+                                <div class="invalid-feedback">Please enter your name.</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                                <div class="invalid-feedback">Please enter a valid email.</div>
+                            </div>
+                            <div class="col-12">
+                                <label for="subject" class="form-label">Subject</label>
+                                <input type="text" class="form-control" id="subject" placeholder="What is this about?" required>
+                                <div class="invalid-feedback">Please enter a subject.</div>
+                            </div>
+                            <div class="col-12">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control" id="message" rows="5" placeholder="Write your message here..." required></textarea>
+                                <div class="invalid-feedback">Please enter your message.</div>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-hero-primary w-100">
+                                    <i class="bi bi-send-fill me-2"></i>Send Message
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="formSuccessMsg" class="alert alert-success mt-3 d-none">
+                        <i class="bi bi-check-circle-fill me-2"></i>
+                        Thank you! Your message has been received. (Demo form — no backend email is sent.)
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="section-padding section-alt">
+    <div class="container">
+        <div class="section-heading text-center">
+            <span class="section-tag">Find Us</span>
+            <h2>Visit Our <span class="text-gradient">Campus</span></h2>
+        </div>
+        <div class="map-placeholder">
+            <i class="bi bi-map"></i>
+            <p>Campus map preview placeholder</p>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,124 @@
+{% extends "layout.html" %}
+{% block title %}About | Campus Companion AI{% endblock %}
+{% block body_class %}page-about{% endblock %}
+
+{% block content %}
+
+<section class="page-header">
+    <div class="container text-center">
+        <span class="badge-pill"><i class="bi bi-info-circle me-1"></i> About the Project</span>
+        <h1>About <span class="text-gradient">Campus Companion AI</span></h1>
+        <p>An IBM University Engagement initiative designed to simplify student life through AI.</p>
+    </div>
+</section>
+
+<section class="section-padding">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+                <span class="section-tag">Our Mission</span>
+                <h2 class="mb-4">Simplifying Campus Life with <span class="text-gradient">Artificial Intelligence</span></h2>
+                <p class="lead-text">
+                    Campus Companion AI was created as part of the IBM University Engagement program
+                    to demonstrate how enterprise AI can transform everyday student experiences.
+                </p>
+                <p>
+                    Every day, students spend valuable time searching for basic information — exam
+                    dates, attendance policies, scholarship deadlines, hostel rules, and placement
+                    schedules. Campus Companion AI consolidates all of this into a single, intelligent,
+                    conversational assistant powered by <strong>IBM watsonx Orchestrate</strong>.
+                </p>
+                <p>
+                    This website serves purely as the front-end interface. It does not build or train
+                    any AI model — instead, it provides a clean, modern, and responsive platform on
+                    which the watsonx Orchestrate agent can be embedded and made accessible to students.
+                </p>
+            </div>
+            <div class="col-lg-6">
+                <div class="glass-panel text-center">
+                    <i class="bi bi-mortarboard-fill display-1 text-gradient"></i>
+                    <h4 class="mt-3">Built for Students</h4>
+                    <p class="text-muted">Designed with student needs at the core of every decision.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-padding section-alt">
+    <div class="container">
+        <div class="section-heading text-center">
+            <span class="section-tag">The Vision</span>
+            <h2>What We <span class="text-gradient">Aim to Achieve</span></h2>
+        </div>
+        <div class="row g-4 mt-3">
+            <div class="col-md-4">
+                <div class="value-card">
+                    <div class="feature-icon-mini"><i class="bi bi-bullseye"></i></div>
+                    <h5>Accessibility</h5>
+                    <p>Make important campus information available to every student, instantly and effortlessly.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="value-card">
+                    <div class="feature-icon-mini"><i class="bi bi-graph-up-arrow"></i></div>
+                    <h5>Efficiency</h5>
+                    <p>Reduce the time students and staff spend answering repetitive administrative questions.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="value-card">
+                    <div class="feature-icon-mini"><i class="bi bi-lightbulb"></i></div>
+                    <h5>Innovation</h5>
+                    <p>Showcase practical applications of IBM watsonx Orchestrate in higher education.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-padding">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6 order-lg-2">
+                <span class="section-tag">Technology</span>
+                <h2 class="mb-4">Powered by <span class="text-gradient">IBM watsonx Orchestrate</span></h2>
+                <p>
+                    IBM watsonx Orchestrate provides the conversational intelligence behind Campus
+                    Companion AI. It understands natural language questions and delivers accurate,
+                    context-aware answers across a wide range of campus-related topics.
+                </p>
+                <ul class="checklist">
+                    <li><i class="bi bi-check-circle-fill"></i> Natural language understanding</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Multi-domain knowledge coverage</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Enterprise-grade reliability</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Seamless web integration</li>
+                </ul>
+            </div>
+            <div class="col-lg-6 order-lg-1">
+                <div class="tech-stack-grid">
+                    <div class="tech-chip"><i class="bi bi-filetype-py"></i> Python Flask</div>
+                    <div class="tech-chip"><i class="bi bi-bootstrap-fill"></i> Bootstrap 5</div>
+                    <div class="tech-chip"><i class="bi bi-filetype-html"></i> HTML5</div>
+                    <div class="tech-chip"><i class="bi bi-filetype-css"></i> CSS3</div>
+                    <div class="tech-chip"><i class="bi bi-filetype-js"></i> JavaScript</div>
+                    <div class="tech-chip"><i class="bi bi-cpu-fill"></i> IBM watsonx Orchestrate</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-box">
+            <h2>Curious how it works?</h2>
+            <p>Explore the full range of features Campus Companion AI has to offer.</p>
+            <a href="{{ url_for('features') }}" class="btn btn-hero-primary">
+                <i class="bi bi-grid-fill me-2"></i>Explore Features
+            </a>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

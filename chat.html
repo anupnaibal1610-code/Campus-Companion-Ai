@@ -1,0 +1,127 @@
+{% extends "layout.html" %}
+{% block title %}Ask AI | Campus Companion AI{% endblock %}
+{% block body_class %}page-chat{% endblock %}
+
+{% block content %}
+
+<section class="page-header page-header-chat">
+    <div class="container text-center">
+        <span class="badge-pill"><i class="bi bi-chat-dots-fill me-1"></i> Ask AI</span>
+        <h1>IBM watsonx Orchestrate <span class="text-gradient">Agent</span></h1>
+        <p>Ask anything about academics, admissions, scholarships, placements, library, hostel, or campus facilities.</p>
+    </div>
+</section>
+
+<section class="section-padding chat-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-9">
+
+                <div class="chat-wrapper">
+                    <div class="chat-header-bar">
+                        <div class="chat-header-left">
+                            <span class="chat-status-dot"></span>
+                            <div>
+                                <h5 class="mb-0">Campus Companion AI</h5>
+                                <small>Powered by IBM watsonx Orchestrate</small>
+                            </div>
+                        </div>
+                        <div class="chat-header-right">
+                            <i class="bi bi-cpu-fill"></i>
+                        </div>
+                    </div>
+
+                    <!-- ============================================================
+                         IBM watsonx Orchestrate Chat Widget Container
+                         The actual AI widget script should be embedded here.
+                         This div acts strictly as a placeholder mount point.
+                    ============================================================= -->
+                    <div id="watsonx-chat" class="watsonx-chat-container">
+                        <div class="watsonx-placeholder">
+                            <div class="placeholder-icon">
+                                <i class="bi bi-robot"></i>
+                            </div>
+                            <h4>IBM watsonx Orchestrate Agent</h4>
+                            <p>
+                                The AI assistant will appear here after embedding the watsonx
+                                Orchestrate chat widget.
+                            </p>
+                            <div class="placeholder-loader">
+                                <span></span><span></span><span></span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="chat-info-note">
+                    <i class="bi bi-info-circle-fill me-2"></i>
+                    This page hosts the container for the IBM watsonx Orchestrate chat widget.
+                    Once the official embed script is added, the assistant will render live here
+                    and respond to student queries in real time.
+                </div>
+
+                <div class="row g-3 mt-4 chat-suggestions">
+                    <div class="col-md-3 col-6">
+                        <div class="suggestion-chip">
+                            <i class="bi bi-calendar3"></i>
+                            <span>Academic Calendar</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="suggestion-chip">
+                            <i class="bi bi-cash-coin"></i>
+                            <span>Scholarships</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="suggestion-chip">
+                            <i class="bi bi-briefcase"></i>
+                            <span>Placements</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="suggestion-chip">
+                            <i class="bi bi-building"></i>
+                            <span>Hostel Info</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+    /*
+        =====================================================================
+        IBM watsonx Orchestrate Embed Placeholder
+        =====================================================================
+        To connect the live AI assistant, paste the official IBM watsonx
+        Orchestrate embed script provided in your watsonx Orchestrate
+        deployment/integration settings below. It typically targets the
+        "#watsonx-chat" container defined in chat.html.
+
+        Example (replace with your actual credentials/config):
+
+        <script>
+          window.watsonAssistantChatOptions = {
+            integrationID: "YOUR_INTEGRATION_ID",
+            region: "YOUR_REGION",
+            serviceInstanceID: "YOUR_SERVICE_INSTANCE_ID",
+            onLoad: async (instance) => { await instance.render(); }
+          };
+          setTimeout(function () {
+            const t = document.createElement('script');
+            t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/versions/latest/WatsonAssistantChatEntry.js";
+            document.head.appendChild(t);
+          });
+        <\/script>
+        =====================================================================
+    */
+</script>
+{% endblock %}
